@@ -16,7 +16,7 @@
     "morgan": "^1.9.1"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node index.js"
+    "start": "nodemon --exec babel-node init.js"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
