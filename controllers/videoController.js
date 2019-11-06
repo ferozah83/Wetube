@@ -1,19 +1,19 @@
 import routes from "../routes";
 import Video from "../models/Video";
 
-export const home = async(req, res) => {
+export const home = async (req, res) => {
   try {
     const videos = await Video.find({});
     res.render("home", { pageTitle: "Home", videos });
-  }catch(error){
+  } catch (error) {
     console.log(error);
     res.render("home", { pageTitle: "Home", videos });
   }
-};  
+};
 
-export const search = (req, res) => { 
-    const { query: { term:searchingBy}} = req; // const searchingBy = req.query.term;
-    res.render("search", { pageTitle: "Search", searchingBy, videos });
+export const search = (req, res) => {
+  const { query: { term: searchingBy } } = req; // const searchingBy = req.query.term;
+  res.render("search", { pageTitle: "Search", searchingBy, videos });
 };
 
 export const getUpload = (req, res) =>
